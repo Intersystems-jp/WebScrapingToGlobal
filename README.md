@@ -1,0 +1,2 @@
+# WebScrapingToGlobal
+lxmlを使用しWebスクレイピングした結果をグローバルに格納する
