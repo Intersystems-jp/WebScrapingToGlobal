@@ -136,6 +136,14 @@ VSCodeをご利用の方は、IRISに接続後、対象のネームスペース�
 
 ## 事前準備
 
+irispip コマンドで必要なライブラリをインストールします。
+今回は、pandas、lxml の2つのライブラリをインストールします。
+~~~
+>cd C:\InterSystems\IRIS\bin
+C:\InterSystems\IRIS\bin>irispip install --target C:\InterSystems\IRIS\mgr\python pandas
+C:\InterSystems\IRIS\bin>irispip install --target C:\InterSystems\IRIS\mgr\python lxml
+~~~
+
 ## 実行方法
 ターミナルで確認する場合は、以下のように実行します。
 ~~~
