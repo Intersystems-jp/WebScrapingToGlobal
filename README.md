@@ -1,7 +1,7 @@
 # WebScrapingToGlobal
 lxmlを使用しWebスクレイピングした結果をグローバルに格納する
 
-[Embedded Python で Excel のデータを IRIS グローバルに格納する方法](https://jp.community.intersystems.com/node/516426) では pandas.DataFrame に取り込んだExcelデータを InterSystems IRIS グローバルに保存する方法をご紹介しました。
+[Embedded Python で Excel のデータを IRIS グローバルに格納する方法](https://jp.community.intersystems.com/node/516426) では Excel データを pandas.DataFrame に取り込んで、それを InterSystems IRIS グローバルに保存する方法をご紹介しました。
 今回は「lxml を使用し Web スクレイピングした表のデータを pandas.DataFrame に取り込んで InterSystems IRIS グローバルに格納する」方法をご紹介します。
 
 最初に、irispip コマンドで必要なライブラリをインストールします。
