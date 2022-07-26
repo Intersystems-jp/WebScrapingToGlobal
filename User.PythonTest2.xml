@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="IRIS" version="26" zv="IRIS for Windows (x86-64) 2022.1 (Build 209U)" ts="2022-07-26 15:49:46">
+<Class name="User.PythonTest2">
+<Super>%Persistent</Super>
+<TimeChanged>66316,56879.902358</TimeChanged>
+<TimeCreated>66316,56869.0339856</TimeCreated>
+
+<Method name="fromPythonString">
+<ClassMethod>1</ClassMethod>
+<FormalSpec>in:%String</FormalSpec>
+<Implementation><![CDATA[ set ^ISJ2($increment(^ISJ2))=$LISTFROMSTRING(in,",")
+]]></Implementation>
+</Method>
+
+<Method name="PythonWebScraping">
+<ClassMethod>1</ClassMethod>
+<FormalSpec>webadd:%String</FormalSpec>
+<Language>python</Language>
+<Implementation><![CDATA[
+    import iris
+    import pandas as pd
+    import lxml
+    dfs = pd.read_html(webadd)
+    for key,row in dfs[0].iterrows():
+     moji=",".join(list(map(str, row)))
+     iris.cls(__name__).fromPythonString(moji)
+]]></Implementation>
+</Method>
+
+<Storage name="Default">
+<Type>%Storage.Persistent</Type>
+<DataLocation>^User.PythonTest2D</DataLocation>
+<DefaultData>PythonTest2DefaultData</DefaultData>
+<IdLocation>^User.PythonTest2D</IdLocation>
+<IndexLocation>^User.PythonTest2I</IndexLocation>
+<StreamLocation>^User.PythonTest2S</StreamLocation>
+<Data name="PythonTest2DefaultData">
+<Structure>listnode</Structure>
+<Subscript/>
+<Value name="1">
+<Value>%%CLASSNAME</Value>
+</Value>
+</Data>
+</Storage>
+</Class>
+</Export>
