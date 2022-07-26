@@ -2,7 +2,7 @@
 lxmlを使用しWebスクレイピングした結果をグローバルに格納する
 
 [Embedded Python で Excel のデータを IRIS グローバルに格納する方法](https://jp.community.intersystems.com/node/516426) では pandas.DataFrame に取り込んだExcelデータを InterSystems IRIS グローバルに保存する方法をご紹介しました。
-今回は、「lxmlを使用しWebスクレイピングした結果を pandas.DataFrame に取り込んで InterSystems IRIS グローバルに格納する」方法をご紹介します。
+今回は「lxml を使用し Web スクレイピングした表のデータを pandas.DataFrame に取り込んで InterSystems IRIS グローバルに格納する」方法をご紹介します。
 
 最初に、irispip コマンドで必要なライブラリをインストールします。
 今回は、pandas、lxml の2つのライブラリをインストールします。
@@ -12,7 +12,7 @@ C:\InterSystems\IRIS\bin>irispip install --target C:\InterSystems\IRIS\mgr\pytho
 C:\InterSystems\IRIS\bin>irispip install --target C:\InterSystems\IRIS\mgr\python lxml
 ~~~
 
-今回使用するのは、Yahoo!ファイナンスでみる 日本郵政(株) の株価時系列データです。
+今回サンプルで使用するのは、Yahoo!ファイナンスでみる 日本郵政(株) の株価時系列データです。
 [https://finance.yahoo.co.jp/quote/6178.T/history](https://finance.yahoo.co.jp/quote/6178.T/history)
 
 VSCode または IRISスタジオで次のようなクラスを作成します。
