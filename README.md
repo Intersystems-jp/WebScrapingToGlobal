@@ -62,3 +62,37 @@ USER>zwrite ^ISJ2
  
 USER>
 ~~~
+
+## おまけ
+
+以下のようなテーブルを表示する簡単なCSPファイルを作成した場合も同様に取得できます。
+~~~
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<table border=1>
+  <tr><td>佐藤</td> <td>19</td> <td>A型</td></tr>
+  <tr><td>加藤</td> <td>24</td> <td>O型</td></tr>
+  <tr><td>伊藤</td> <td>20</td> <td>B型</td></tr>
+</table></body>
+</html>
+~~~
+
+同じように実行します。
+~~~
+SER>kill ^ISJ2
+
+USER>do ##class(User.PythonTest2).PythonWebScraping("http://172.25.26.194:52773/csp/user/test.csp")
+
+USER>zwrite ^ISJ2
+^ISJ2=3
+^ISJ2(1)=$lb("佐藤","19","A型")
+^ISJ2(2)=$lb("加藤","24","O型")
+^ISJ2(3)=$lb("伊藤","20","B型")
+
+USER>
+
+~~~
+
