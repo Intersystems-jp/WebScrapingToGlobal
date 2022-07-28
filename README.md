@@ -85,7 +85,7 @@ USER>
 ~~~
 SER>kill ^ISJ2
 
-USER>do ##class(User.PythonTest2).PythonWebScraping("http://172.25.26.194:52773/csp/user/test.csp")
+USER>do ##class(User.PythonTest2).PythonWebScraping("http://localhost/csp/user/test.csp")
 
 USER>zwrite ^ISJ2
 ^ISJ2=3
