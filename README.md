@@ -23,7 +23,8 @@ VSCodeをご利用の方は、IRISに接続後、対象のネームスペース�
 
 irispip コマンドで必要なライブラリをインストールします。  
 今回は、pandas、lxml の2つのライブラリをインストールします。  
-※Windows 上の IRIS でのインストール方法  
+※以下は Windows 上の IRIS でのインストール方法になります。
+　UNIX ベースのシステムでは、pip3 コマンドを使用してインストールします。詳細は [ドキュメント](https://docs.intersystems.com/iris20221/csp/docbookj/DocBook.UI.Page.cls?KEY=AFL_epython#AFL_epython_pylibrary_install) をご覧ください。
 ~~~
 >cd C:\InterSystems\IRIS\bin
 C:\InterSystems\IRIS\bin>irispip install --target C:\InterSystems\IRIS\mgr\python pandas
